@@ -1,0 +1,36 @@
+<div class="card text-left">
+    <h4 class="card-header d-flex justify-content-between">
+        Categories
+        <a name="" id="" class="btn btn-sm btn-outline-primary" href="/admin/categories/add" role="button">
+            <i class="bi bi-plus-circle"></i>
+            New Category
+        </a>
+    </h4>
+    <div class="card-body">
+        <table class="table">
+            <thead>
+                <tr>
+                <th scope="col">#</th>
+                <th scope="col">Category</th>
+                <th scope="col">&nbsp;</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each this.list}}
+                <tr>
+                    <th scope="row">{{CatID}}</th>
+                    <td>{{CatName}}</td>
+                    <td>
+                        <a class="btn btn-sm btn-primary" href="/admin/categories/edit?id={{CatID}}" role="button">
+                            <i class="bi bi-pencil-square"></i>
+                        </a>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>                    
+    </div>
+    <div class="card-footer text-muted">
+        2 days ago
+    </div>
+</div>

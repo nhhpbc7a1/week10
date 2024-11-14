@@ -1,0 +1,24 @@
+<div class="card">
+    <div class="card-header">
+        Header
+    </div>
+    <div class="card-body">
+        <img src="/static/images//sp/{{this.product.ProID}}/main.jpg" alt="{{this.product.ProName}}">
+        <p class="card-text">
+            Giá bán:
+            <span class="text-danger font-weight-bold">{{format_number this.product.Price}}</span>
+        </p>
+        <p class="card-text">
+            Tồn kho:
+            <span class="text-danger font-weight-bold">{{this.product.Quantity}}</span>
+        </p>
+        <h5 class="card-tittle">Mô tả</h5>
+        <p class="card-text">
+            {{{this.product.FullDes}}}
+        </p>
+
+    </div>
+    <div class="card-footer text-muted">
+        Footer
+    </div>
+</div>

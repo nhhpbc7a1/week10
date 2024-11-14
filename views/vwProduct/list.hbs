@@ -1,0 +1,36 @@
+<div class="card text-left">
+    <h4 class="card-header">
+        Products
+    </h4>
+    <div class="card-body">
+        <table class="table">
+            <thead>
+                <tr>
+                <th scope="col">#</th>
+                <th scope="col">Product</th>
+                <th scope="col">Price</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">&nbsp;</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each this.list}}
+                <tr>
+                    <th scope="row">{{ProID}}</th>
+                    <td>{{ProName}}</td>
+                    <td>{{Price}}</td>
+                    <td>{{Quantity}}</td>
+                    <td>
+                        <a class="btn btn-sm btn-primary" href="#" role="button">
+                            <i class="bi bi-pencil-square"></i>
+                        </a>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>                    
+    </div>
+    <div class="card-footer text-muted">
+        2 days ago
+    </div>
+</div>

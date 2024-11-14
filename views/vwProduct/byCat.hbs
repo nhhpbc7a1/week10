@@ -1,0 +1,71 @@
+<div class="card">
+    <div class="card-header">
+        Products
+    </div>
+    {{#if this.empty}}
+    <div class="card-body">
+        Khong co du lieu
+    </div>
+    {{else}}
+    <div class="cart-body">
+        <div class="row">
+            {{#each this.products}}
+            <div class="col-sm-6 col-md-4 mb-3">
+                <div class="card h-100">
+                    <div class="card-body">`
+                        <img src="/static/images/sp/{{ProID}}/main.jpg" class="card-img-top" alt="...">
+                        <h5 class="card-title">{{ProName}}</h5>
+                        <h5 class="card-title text-danger">{{format_number Price}}</h5>
+                        <p class="card-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis quisquam architecto eius
+                            consectetur. Qui dignissimos iure nulla nesciunt veritatis iusto praesentium et
+                            exercitationem. Vel molestias numquam, ipsum aliquam quos itaque!
+                        </p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <a name="" id="" class="btn btn-sm btn-outline-primary" href="/products/detail?id={{{ProID}}}" role="button">
+                            <i class="bi bi-eye-fill"></i>
+                            Detail
+                        </a>
+                        <a name="" id="" class="btn btn-sm btn-outline-success" href="#" role="button">
+                            <i class="bi bi-cart-plus-fill"></i>
+                            Add to cart
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            {{/each}}
+        </div>
+        <ul class="pagination">
+            <li class="page-item disabled">
+                <a class="page-link">Previous</a>
+            </li>
+            {{#each this.pageNumbers}}
+            {{#if active}}
+            <li class="page-item active">
+                <a class="page-link" href="#">{{value}}</a>
+            </li>
+
+            {{else}}
+            <li class="page-item">
+                <a class="page-link" href="?id={{../catId}}&page={{value}}">{{value}}</a>
+            </li>
+            {{/if}}
+            {{/each}}
+
+            <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+            </li>
+        </ul>
+
+    </div>
+
+
+    {{/if}}
+
+
+    <div class="card-footer text-muted">
+        Footer
+    </div>
+</div>
